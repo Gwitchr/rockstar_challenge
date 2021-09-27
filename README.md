@@ -22,6 +22,7 @@ Also you can find it working here [heroku](https://rockstar-ch.herokuapp.com)
 
 - Could've added a debounce function to the search bar input to not spam the API with every key pressed 
 - Footer anybody?
+- Image handling for the jumbo could be based on js width utility, to improve performance
 - I think search results are cached 🤔...
 - UI will mostly work on mobile devices, could've polished it along the "more info" slider
 - Filtering will work for both discoveries and search results
