@@ -34,7 +34,7 @@ function MovieDetails() {
       <b>{`Avg vote ${vote_average} based on ${vote_count} votes`}</b>
       <p>{`Original title: "${original_title}"`}</p>
       <p>{`Original language: "${original_language}"`}</p>
-      <p>{`Original language: "${popularity}"`}</p>
+      <p>{`Popularity: "${popularity}"`}</p>
     </section>
   );
 }
