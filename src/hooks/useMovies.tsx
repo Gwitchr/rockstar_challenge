@@ -13,18 +13,20 @@ const API_URL_SEARCH = "https://api.themoviedb.org/3/search/movie";
 
 const posterPath = "https://image.tmdb.org/t/p/original";
 
-export function useMovies(query: IQueryContent) {
+export function useMovies(queryObj: IQueryContent) {
   const queryParams = new URLSearchParams();
 
   queryParams.set("api_key", API_KEY);
 
-  Object.keys(query).forEach((key) => {
-    queryParams.set(key, query[key as string] || "");
+  Object.keys(queryObj).forEach((key) => {
+    if (key !== "") {
+      queryParams.set(key, queryObj[key as string] || "");
+    }
   });
 
   const { data, error } = useSWR(
     `${
-      query.query !== "" ? API_URL_SEARCH : API_URL
+      queryObj.query !== "" ? API_URL_SEARCH : API_URL
     }?${queryParams.toString()}`,
     fetcher
   );
