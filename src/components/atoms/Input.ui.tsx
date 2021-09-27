@@ -1,13 +1,14 @@
+import { InputHTMLAttributes } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-interface IInputProps {
+interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   search: boolean;
   placeholder?: string;
   label?: string;
 }
 
-function Input({ search, placeholder, label }: IInputProps) {
+function Input({ search, placeholder, label, onChange }: IInputProps) {
   return (
     <div className="relative text-gray-600">
       <label hidden htmlFor="">
@@ -22,6 +23,7 @@ function Input({ search, placeholder, label }: IInputProps) {
         className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:outline-none"
         type="text"
         placeholder={`${placeholder || ""}...`}
+        onChange={onChange}
       />
     </div>
   );
