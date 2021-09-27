@@ -2,9 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Getting Started with Create React App
+# Getting Started with the project
 
 You'll need to set a value for `REACT_APP_MOVIE_API_KEY` in an .env file to have this working
+
+it is bootstrapped with [The Movie DB](https://developers.themoviedb.org/3)
 
 ## Available Scripts
 
