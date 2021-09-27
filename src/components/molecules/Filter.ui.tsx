@@ -14,15 +14,21 @@ const filterVals = [
 
 function Filter() {
   const ctx = useAppContext();
+  const selRating = ctx.appState.filter;
 
   const handleSetFilter = (filter: number) => {
-    ctx.setAppState({
-      ...ctx.appState,
-      filter,
-    });
+    if (filter === selRating) {
+      ctx.setAppState({
+        ...ctx.appState,
+        filter: null,
+      });
+    } else {
+      ctx.setAppState({
+        ...ctx.appState,
+        filter,
+      });
+    }
   };
-
-  const selRating = ctx.appState.filter;
 
   return (
     <Container className="flex justify-center">

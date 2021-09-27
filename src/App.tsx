@@ -3,12 +3,10 @@ import { AppWrapper } from "./context";
 import { Jumbo } from "./components/molecules/";
 import { Slider, MovieRoster } from "./components/organisms";
 
-import "./App.css";
-
 function App() {
   return (
     <AppWrapper>
-      <div className="App">
+      <div>
         <Slider />
         <Jumbo />
 
