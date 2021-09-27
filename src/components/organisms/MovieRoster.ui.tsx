@@ -13,7 +13,10 @@ function MovieRoster() {
 
   const movies: IMovie[] = useMemo(() => {
     const filterFn = (el: IMovie) =>
-      ctx.appState.filter ? el.vote_average <= ctx.appState.filter : el;
+      ctx.appState.filter
+        ? el.vote_average > ctx.appState.filter - 2 &&
+          el.vote_average <= ctx.appState.filter
+        : el;
 
     return data?.results ? data.results.filter(filterFn) : [];
   }, [data?.results, ctx.appState.filter]);
