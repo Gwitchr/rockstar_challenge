@@ -15,19 +15,19 @@ function Button({
   const colorStyles: string = useMemo(() => {
     switch (color) {
       case "primary":
-        return "text-white bg-accent hover:bg-contrast shadow-md";
+        return "text-white bg-blue-600 hover:bg-contrast shadow-md";
       case "outline":
         return "text-white bg-transparent  hover:shadow-md";
       case "secondary":
-        return "text-accent bg-white hover:bg-gray-200 hover:shadow-md";
+        return "text-blue-600 bg-white hover:bg-gray-200 hover:shadow-md";
       default:
-        return "text-white bg-accent hover:bg-contrast shadow-md";
+        return "text-white bg-blue-600 hover:bg-contrast shadow-md";
     }
   }, [color]);
   return (
     <button
       onClick={onClick}
-      className={`${className} ${colorStyles} py-2 px-5 focus:ring-accent-dark focus:outline-none   font-light rounded  focus:ring-2 focus:ring-opacity-75`}
+      className={`${className} ${colorStyles} py-2 px-5 focus:ring-blue-600-dark focus:outline-none   font-light rounded  focus:ring-2 focus:ring-opacity-75`}
       {...rest}
     >
       {children}
