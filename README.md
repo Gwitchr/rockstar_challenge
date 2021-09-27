@@ -26,6 +26,7 @@ Also you can find it working here [heroku](https://rockstar-ch.herokuapp.com)
 - For now, only 9 results are being shown, this could be improved
 - Contrast on the Jumbo could be better
 - Context for this amount of info is fine, with a bit more of info could've been better to include redux or make a reducer
+- Should've wrapped emoji in accessible spans
 - OGH, 😠 withouth loading states, the UI is all jumpy, would be a must if I worked a bit further on this
 - Data handling with a reducer seems also like a good way to go next so that is available globally
 - Man, I think CRA is kind of outdated, no aliases without ejecting 😔
