@@ -33,12 +33,12 @@ function MovieRoster() {
       </Container>
       <Filter />
       <Container className="flex flex-wrap" tag="section">
-        <div className="w-4/12">
+        <div className="w-full md:w-4/12">
           {movies.slice(0, 1).map((el) => (
             <MovieItem main key={el.id} posterPath={posterPath} data={el} />
           ))}
         </div>
-        <div className="w-8/12 flex flex-wrap">
+        <div className="w-full md:w-8/12 flex flex-wrap">
           {movies.slice(1, 9).map((el) => (
             <MovieItem key={el.id} posterPath={posterPath} data={el} />
           ))}

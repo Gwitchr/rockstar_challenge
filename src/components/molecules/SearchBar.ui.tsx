@@ -18,9 +18,22 @@ function SearchBar() {
     });
   };
 
+  const handleClear = () => {
+    ctx.setAppState({
+      ...ctx.appState,
+      searchTerm: "",
+    });
+  };
+
   return (
     <div>
-      <Input onChange={handleChange} search placeholder="Search for a movie" />
+      <Input
+        value={ctx.appState.searchTerm || ""}
+        onClear={handleClear}
+        onChange={handleChange}
+        search
+        placeholder="Search for a movie"
+      />
     </div>
   );
 }
