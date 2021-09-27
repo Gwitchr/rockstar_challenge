@@ -4,7 +4,7 @@ import { SearchBar } from "./";
 function Jumbo() {
   return (
     <section
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center text-center"
       style={{
         background: `url(https://source.unsplash.com/P2wLo_PzHjU)`,
         backgroundSize: "cover",
