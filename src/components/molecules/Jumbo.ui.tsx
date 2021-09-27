@@ -12,7 +12,7 @@ function Jumbo() {
         minHeight: "60vh",
       }}
     >
-      <h3 className="text-white text-2xl mb-5">
+      <h3 className="text-white text-3xl md:text-6xl mb-10">
         Find your favourite movies locally
       </h3>
       <SearchBar />

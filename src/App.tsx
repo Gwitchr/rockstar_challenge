@@ -1,13 +1,16 @@
 import React from "react";
 import { Jumbo } from "./components/molecules/";
+import { AppWrapper } from "./context";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Jumbo />
-    </div>
+    <AppWrapper>
+      <div className="App">
+        <Jumbo />
+      </div>
+    </AppWrapper>
   );
 }
 
