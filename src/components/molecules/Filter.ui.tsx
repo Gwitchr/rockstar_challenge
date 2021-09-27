@@ -16,7 +16,6 @@ function Filter() {
   const ctx = useAppContext();
 
   const handleSetFilter = (filter: number) => {
-    console.log({ filter });
     ctx.setAppState({
       ...ctx.appState,
       filter,
